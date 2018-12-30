@@ -16,7 +16,7 @@
                 <td>Image</td>
                 <td>Level</td>
                 <td>Type</td>
-                <td>Indian Name</td>
+                <td>Sanskrit Name</td>
             </tr>
         </thead>
     </table>
@@ -33,14 +33,14 @@
         let image = row.insertCell(2);
         let level = row.insertCell(3);
         let type = row.insertCell(4);
-        let indianName = row.insertCell(5);
+        let sanskritName = row.insertCell(5);
 
         name.innerText = pose.name;
         caption.innerText = pose.caption;
         image.innerHTML = `<img src='../${pose.image}' width='150px' height='150px'/>`;
         level.innerText = pose.level;
         type.innerText = pose.type;
-        indianName.innerText = pose.indianName;
+        sanskritName.innerText = pose.sanskritName;
     }
   </script>
 </html>
