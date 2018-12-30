@@ -80,10 +80,11 @@ img {
   table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 70%;
-    border: 1px solid #ddd;
+    width: 100%;
+    /* border: 1px solid #ddd; */
     /* float: right; */
     margin: 5px;
+    padding: 20px;
     clear:both;
     float: right;
   }
@@ -92,3 +93,4 @@ img {
     text-align: left;
     padding: 5px;
   }
+
