@@ -1,13 +1,19 @@
+class YogaPose {
+    constructor(name, image) {
+        this.name = name;
+        this.image = image;
+    }
+}
+
 class MyYogaDice {
     constructor() {
         this.defaultImage = 'images/default.jpg';
     }
 
-    rollTheDice() {
-        const poses = 6;
+    rollTheDice(numberOfPoses) {
         let posePictures = [];
-        for(let i = 0; i < poses; i++) {
-            posePictures.push(this.defaultImage);
+        for(let i = 0; i < numberOfPoses; i++) {
+            posePictures.push(new YogaPose(`Pose ${i}`, this.defaultImage));
         }
         return posePictures;
     }
@@ -28,9 +34,9 @@ for(let element of poseElements) {
 }
 
 rollButton.addEventListener('click', function() {
-    const poses = die.rollTheDice();
+    const poses = die.rollTheDice(poseImages.length);
     for(let i = 0; i < poses.length; i++) {
-        debugger;
-        poseImages[i].src = poses[i];
+        poseImages[i].src = poses[i].image;
+        poseImages[i].title = poses[i].name;
     }
 });
