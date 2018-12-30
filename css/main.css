@@ -1,0 +1,43 @@
+header {
+    font-family: 'comic sans ms';
+    font-weight: bold;
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+div {
+    padding: 40px;
+    text-align: center;
+
+} 
+
+button {
+    background-color: black;
+    font-family: 'comic sans ms';
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pose1, #pose2, #pose3, #pose4, #pose5, #pose6 {
+    background-color: rgb(228, 226, 226);
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: solid;
+    width: 150px;
+    height: 150px;
+    border: 1px solid blue; 
+}
