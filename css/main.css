@@ -1,5 +1,6 @@
 header {
-    font-family: 'comic sans ms';
+    font-family: Arial, Verdana, sans-serif;
+    color: #0059b3;
     font-weight: bold;
     font-size: 60px;
     margin: auto;
@@ -10,24 +11,23 @@ header {
 div {
     padding: 40px;
     text-align: center;
-
 } 
 
 button {
-    background-color: black;
-    font-family: 'comic sans ms';
+    background-color: #4da6ff;
+    font-family: Arial, Verdana, sans-serif;
     border: none;
     color: white;
     padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     border-radius: 8px;
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #0059b3;
     color: white;
 }
 
