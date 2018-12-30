@@ -19,10 +19,13 @@ function shuffle(array) {
   }
 
 class YogaPose {
-    constructor(name, image, caption) {
+    constructor(name, image, caption, sanskritName, type, level) {
         this.name = name;
         this.image = image;
         this.caption = caption;
+        this.sanskritName = sanskrit name;
+        this.type = type;
+        this.level = level;
     }
 }
 
@@ -72,6 +75,8 @@ die.addPose('Eagle Pose', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', '
 die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 1);
 
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
+
+die.addPose('Dolphin', 'images/', 'Dolphin', '')
 
 const poseTiles = document.getElementsByClassName("poseTile");
 let tiles = [];
