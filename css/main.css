@@ -55,3 +55,11 @@ img {
     /* margin: 5px; */
     padding: 5px;
   }
+
+  .poseHard {
+    border-color: red;
+  }
+
+  .poseMedium {
+      border-color: orange;
+  }

@@ -69,11 +69,11 @@ die.addPose('Fish', 'images/fish.png', 'Fish', 'Matsyasana', 'Chest Opening', 1)
 die.addPose('Cobra', 'images/cobra.jpg', 'Cobra', 'Bhujangasana', 'Chest Opening', 1);
 
 die.addPose('Crow', 'images/crow.png', 'Crow', 'Bakasana', 'Balance', 2);
-die.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 1);
+die.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 2);
 die.addPose('Eagle Pose', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
 
 
-die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 1);
+die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 2);
 
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 
