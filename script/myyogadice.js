@@ -76,22 +76,4 @@ die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasan
 
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 
-die.addPose('Dolphin', 'images/', 'Dolphin', 'Ardha Pincha Mayurasana', 'Inversion', 1)
-
-const poseTiles = document.getElementsByClassName("poseTile");
-let tiles = [];
-
-for(let element of poseTiles) {
-    tiles.push(element);
-}
-
-const rollButton = document.getElementById('roll');
-rollButton.addEventListener('click', function() {
-    const poses = die.rollTheDice(tiles.length);
-    for(let i = 0; i < poses.length; i++) {
-        let imgPose = tiles[i].getElementsByTagName("img")[0];
-        imgPose.src = poses[i].image;
-        imgPose.title = poses[i].name;
-        tiles[i].getElementsByTagName("figcaption")[0].innerText = poses[i].caption;
-    }
-});
+die.addPose('Dolphin', 'images/', 'Dolphin', 'Ardha Pincha Mayurasana', 'Inversion', 1);
