@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>My Yoga Dice :: Dump Poses</title>
+    <header>My Yoga Dice :: Debugging Tools :: Dump Poses</header>
+  </head>
+
+  <body>
+    <table id="all-poses">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Caption</td>
+                <td>Image</td>
+                <td>Level</td>
+                <td>Indian Name</td>
+            </tr>
+        </thead>
+    </table>
+    <a href='index.html'>Back to debugging tools</a>
+  </body>
+
+  <script src='../script/myyogadice.js'></script>
+  <script lang="text/javascript">
+    let table = document.getElementById('all-poses');
+    for(let pose of die.poses) {
+        let row = table.insertRow();
+        let name = row.insertCell(0);
+        let caption = row.insertCell(1);
+        let image = row.insertCell(2);
+
+        name.innerText = pose.name;
+        caption.innerText = pose.caption;
+        image.innerHTML = `<img src='../${pose.image}' width='150px' height='150px'/>`;
+    }
+  </script>
+</html>
