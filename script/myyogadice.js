@@ -19,9 +19,10 @@ function shuffle(array) {
   }
 
 class YogaPose {
-    constructor(name, image) {
+    constructor(name, image, caption) {
         this.name = name;
         this.image = image;
+        this.caption = caption;
     }
 }
 
@@ -31,8 +32,8 @@ class MyYogaDice {
         this.poses = [];
     }
 
-    addPose(name, imageUri = this.defaultImage) {
-        this.poses.push(new YogaPose(name,imageUri));
+    addPose(name, imageUri = this.defaultImage, caption = '') {
+        this.poses.push(new YogaPose(name, imageUri, caption));
     }
 
     rollTheDice(numberOfPoses) {
@@ -54,13 +55,13 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
-die.addPose('Pigeon','images/pigeon.jpg');
-die.addPose('Fish','images/fish.png');
-die.addPose('Cobra','images/cobra.jpg');
-die.addPose('Crow','images/crow.png');
-die.addPose('Standing Forward Bend','images/standing-forward-bend.png');
-die.addPose('Triangle','images/triangle.jpg');
-die.addPose('??');
+die.addPose('Pigeon','images/pigeon.jpg', 'Pigeon');
+die.addPose('Fish','images/fish.png', 'Fish');
+die.addPose('Cobra','images/cobra.jpg', 'Cobra');
+die.addPose('Crow','images/crow.png', 'Crow');
+die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing Forward Bend');
+die.addPose('Triangle','images/triangle.jpg', 'Triangle');
+die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel');
 
 const rollButton = document.getElementById('roll');
 
@@ -74,10 +75,18 @@ for(let element of poseElements) {
     poseImages.push(element);
 }
 
+const captionsElements = document.getElementsByTagName("figcaption");
+let figCaptions = [];
+
+for(let element of captionsElements) {
+    figCaptions.push(element);
+}
+
 rollButton.addEventListener('click', function() {
     const poses = die.rollTheDice(poseImages.length);
     for(let i = 0; i < poses.length; i++) {
         poseImages[i].src = poses[i].image;
         poseImages[i].title = poses[i].name;
+        figCaptions[i].innerText = poses[i].caption;
     }
 });
