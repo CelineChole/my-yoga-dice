@@ -60,6 +60,7 @@ die.addPose('Cobra','images/cobra.jpg');
 die.addPose('Crow','images/crow.png');
 die.addPose('Standing Forward Bend','images/standing-forward-bend.png');
 die.addPose('Triangle','images/triangle.jpg');
+die.addPose('??');
 
 const rollButton = document.getElementById('roll');
 
