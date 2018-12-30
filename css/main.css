@@ -1,4 +1,4 @@
-header {
+/* header {
     font-family: Arial, Verdana, sans-serif;
     color: #0059b3;
     font-weight: bold;
@@ -6,15 +6,21 @@ header {
     margin: auto;
     text-align: left;
     padding: 10px;
-}
+    /* float: left; */
+    /* clear: both; */
+} */
 
 div {
-    padding: 10px;
-} 
+    padding: 5px;
+}
+
+p {
+    font-family: Arial, Verdana, sans-serif;
+}
+
 
 button {
     background-color: #4da6ff;
-    font-family: Arial, Verdana, sans-serif;
     border: none;
     color: white;
     padding: 15px 30px;
@@ -30,6 +36,16 @@ button:hover {
     color: white;
 }
 
+.userInput {
+    /* border: 1px solid #ddd; */
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    clear: both;
+    float:left;
+    font-family: Arial, Verdana, sans-serif;
+}
+
 img {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -39,27 +55,40 @@ img {
     text-align: center;
   }
 
-  .images {
-    text-align: center;
-    float:right;
-  }
-
   figure {
     float: right;
-    /* width: 100px; */
+    /* width: 10px; */
     text-align: center;
     font-style: italic;
     font-size: smaller;
     text-indent: 0;
     border: thin silver solid;
-    /* margin: 5px; */
+    margin: 1px;
     padding: 5px;
   }
 
   .poseHard {
-    border-color: red;
+    border-color: #0077b3;
+    border-width: thick;
   }
 
   .poseMedium {
-      border-color: orange;
+      border-color: #99ddff;
+      border-width: thick;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+    border: 1px solid #ddd;
+    /* float: right; */
+    margin: 5px;
+    clear:both;
+    float: right;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 5px;
   }

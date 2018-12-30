@@ -5,54 +5,69 @@
     <meta charset="UTF-8">
     <title>My Yoga Dice</title>
     <link rel="stylesheet" href="css/main.css">
-    <header>My Yoga Dice</header>
+    <!-- <header>My Yoga Dice</header> -->
   </head>
 
   <body>
-<div>
-    <button id ="roll">Roll the dice</button>
-</div>
 
-<div class='images'>
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
+    <div>
+      <button id ="roll">Roll the dice</button>
+    </div>
 
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
+    <div class='userInput'>
+      <form>
+        <p>Select your level or leave it blank for all levels</p>
+        <input type="radio" name="level" value="Beginner">Beginner<br>
+        <input type="radio" name="level" value="Intermediate">Intermediate<br>
+        <input type="radio" name="level" value="Advanced">Advanced<br>
+      </form>
+    </div>
 
-  <figure class='poseTile'>  
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
-</div>
+  <div style="overflow-x:auto;">
+      <table>
+        <tr>
+          <td><figure class='poseTile'>
+              <img class='poseImage' src="images/question.jpg">
+              <figcaption></figcaption>
+            </figure></td>
 
-<div class='images'>
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
+            <td><figure class='poseTile'>
+                <img class='poseImage' src="images/question.jpg">
+                <figcaption></figcaption>
+            </figure></td>
 
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
+            <td><figure class='poseTile'>
+                <img class='poseImage' src="images/question.jpg">
+                <figcaption></figcaption>
+            </figure></td>
+        </tr>
 
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
-</div>
+        <tr>
+          <td><figure class='poseTile'>
+            <img class='poseImage' src="images/question.jpg">
+            <figcaption></figcaption>
+          </figure></td>
 
-<div class='images'> 
-  <figure class='poseTile'>
-    <img class='poseImage' src="images/question.jpg">
-    <figcaption></figcaption>
-  </figure>
-</div>
+            <td><figure class='poseTile'>
+              <img class='poseImage' src="images/question.jpg">
+              <figcaption></figcaption>
+            </figure></td>
+
+            <td><figure class='poseTile'>
+              <img class='poseImage' src="images/question.jpg">
+              <figcaption></figcaption>
+            </figure></td>
+        </tr>
+
+        <tr>
+          <td><figure class='poseTile'>
+            <img class='poseImage' src="images/question.jpg">
+            <figcaption></figcaption>
+          </figure></td>
+        </tr>
+      </table>
+    </div>
+
 </div>
 
     <script src='script/myyogadice.js'></script>
