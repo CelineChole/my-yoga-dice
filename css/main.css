@@ -10,7 +10,11 @@ body {
   footer {
     align-items: center;
     justify-content: center;
-  }
+}
+
+form {
+    font-family: arial, helvetica, sans-serif;
+}
 
   .tiles {
     display: grid;

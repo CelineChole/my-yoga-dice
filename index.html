@@ -70,9 +70,8 @@
         tiles.push(element);
     }
 
-    const rollButton = document.getElementById('roll');
-    rollButton.addEventListener('click', function() {
-        const poses = die.rollTheDice(tiles.length);
+    function doDiceRoll() {
+      const poses = die.rollTheDice(tiles.length);
         for(let i = 0; i < poses.length; i++) {
           let curTile = tiles[i];
           let imgPose = curTile.getElementsByTagName("img")[0];
@@ -94,8 +93,14 @@
             imgPose.classList.add('poseMedium');
             break;
           }
-
         }
+    }
+
+    document.getElementById('roll').addEventListener('click', doDiceRoll);
+    document.addEventListener('keyup', function(event) {
+      if(event.keyCode === 82) {
+        doDiceRoll();
+      }
     });
     </script>
   </body>
