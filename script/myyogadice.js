@@ -54,12 +54,12 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
-die.addPose('Pigeon');
-die.addPose('Fish');
-die.addPose('Cobra');
-die.addPose('Crow');
-die.addPose('Standing Forward Bend');
-die.addPose('Triangle');
+die.addPose('Pigeon','images/pigeon.jpg');
+die.addPose('Fish','images/fish.png');
+die.addPose('Cobra','images/cobra.jpg');
+die.addPose('Crow','images/crow.png');
+die.addPose('Standing Forward Bend','images/standing-forward-bend.png');
+die.addPose('Triangle','images/triangle.jpg');
 
 const rollButton = document.getElementById('roll');
 
