@@ -31,13 +31,10 @@ button:hover {
     color: white;
 }
 
-#pose1, #pose2, #pose3, #pose4, #pose5, #pose6 {
-    background-color: rgb(228, 226, 226);
-    padding: 10px 30px;
-    font-size: 20px;
-    border-radius: 8px;
-    border: solid;
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
     width: 150px;
     height: 150px;
-    border: 1px solid blue; 
-}
+  }
