@@ -1,20 +1,20 @@
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  
+
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-  
+
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-  
+
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
+
     return array;
   }
 
@@ -45,8 +45,8 @@ class MyYogaDice {
         let availablePoses = shuffle(this.poses.slice());
 
         // Pop items from the array until we have as many as we need
-        for(let i = 0; i < numberOfPoses; i++) {
-            if(availablePoses.length > 0) {
+        for (let i = 0; i < numberOfPoses; i++) {
+            if (availablePoses.length > 0) {
                 posePictures.push(availablePoses.pop());
             } else {
                 // If we run out of poses pop a default pose
@@ -74,7 +74,7 @@ die.addPose('Eagle', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balan
 
 die.addPose('Bridge', 'images/bridge.jpg', 'Bridge', 'Setu Bandha Sarvangasana', 'Back', 1);
 die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 2);
-die.addPose('Wheel one leg up', 'images/wheel-one-leg-up.png', 'Wheel One Leg Up', 'Eka Pada Urdvha Dhanurasana' , 'Back', 3);
+die.addPose('Wheel one leg up', 'images/wheel-one-leg-up.png', 'Wheel One Leg Up', 'Eka Pada Urdvha Dhanurasana', 'Back', 3);
 
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 die.addPose('Side Crane', 'images/revolved-chair-pose.jpeg', 'Side Crane', 'Parivrtta Utkatasana', 'twist', 2);
