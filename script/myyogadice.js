@@ -23,7 +23,7 @@ class YogaPose {
         this.name = name;
         this.image = image;
         this.caption = caption;
-        this.sanskritName = sanskrit name;
+        this.sanskritName = sanskritName;
         this.type = type;
         this.level = level;
     }
@@ -35,8 +35,8 @@ class MyYogaDice {
         this.poses = [];
     }
 
-    addPose(name, imageUri = this.defaultImage, caption = '') {
-        this.poses.push(new YogaPose(name, imageUri, caption));
+    addPose(name, imageUri = this.defaultImage, caption = '', sanskritName = '', type, level = 0) {
+        this.poses.push(new YogaPose(name, imageUri, caption, sanskritName, type, level));
     }
 
     rollTheDice(numberOfPoses) {
@@ -58,11 +58,11 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
-die.addPose('Triangle', 'images/triangle.jpg', 'Triangle', 'Utthita Trikonasana', 'Standing');
+die.addPose('Triangle', 'images/triangle.jpg', 'Triangle', 'Utthita Trikonasana', 'Standing', 1);
 die.addPose('Garland', 'images/garland.jpg', 'Garland', 'Malasana', 'Standing', 1);
 die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing', 1);
 
-die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon', '?', 'Chest Opening' 1);
+die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon', '?', 'Chest Opening', 1);
 die.addPose('Bow Pose', 'images/bow-pose.png', 'Bow Pose', 'Dhanurasana', 'Chest Opening', 2)
 die.addPose('Fish', 'images/fish.png', 'Fish', 'Matsyasana', 'Chest Opening', 1);
 die.addPose('Cobra', 'images/cobra.jpg', 'Cobra', 'Bhujangasana', 'Chest Opening', 1);
@@ -76,7 +76,7 @@ die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasan
 
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 
-die.addPose('Dolphin', 'images/', 'Dolphin', '')
+die.addPose('Dolphin', 'images/', 'Dolphin', 'Ardha Pincha Mayurasana', 'Inversion', 1)
 
 const poseTiles = document.getElementsByClassName("poseTile");
 let tiles = [];
