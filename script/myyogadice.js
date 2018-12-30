@@ -55,18 +55,23 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
-die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon');
-die.addPose('Triangle', 'images/triangle.jpg', 'Triangle');
+die.addPose('Triangle', 'images/triangle.jpg', 'Triangle', 'Utthita Trikonasana', 'Standing');
+die.addPose('Garland', 'images/garland.jpg', 'Garland', 'Malasana', 'Standing', 1);
+die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing', 1);
+
+die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon', '?', 'Chest Opening' 1);
 die.addPose('Bow Pose', 'images/bow-pose.png', 'Bow Pose', 'Dhanurasana', 'Chest Opening', 2)
 die.addPose('Fish', 'images/fish.png', 'Fish', 'Matsyasana', 'Chest Opening', 1);
 die.addPose('Cobra', 'images/cobra.jpg', 'Cobra', 'Bhujangasana', 'Chest Opening', 1);
+
 die.addPose('Crow', 'images/crow.png', 'Crow', 'Bakasana', 'Balance', 2);
-die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing Forward Bend', 1);
-die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 1);
-die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 die.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 1);
 die.addPose('Eagle Pose', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
 
+
+die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 1);
+
+die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 
 const poseTiles = document.getElementsByClassName("poseTile");
 let tiles = [];
@@ -80,9 +85,6 @@ rollButton.addEventListener('click', function() {
     const poses = die.rollTheDice(tiles.length);
     for(let i = 0; i < poses.length; i++) {
         let imgPose = tiles[i].getElementsByTagName("img")[0];
-        console.log(imgPose);
-        
-        
         imgPose.src = poses[i].image;
         imgPose.title = poses[i].name;
         tiles[i].getElementsByTagName("figcaption")[0].innerText = poses[i].caption;
