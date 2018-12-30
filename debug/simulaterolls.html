@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>My Yoga Dice :: Simulate Rolls</title>
+    <header>My Yoga Dice :: Debugging Tools :: Simulate Rolls</header>
+  </head>
+
+  <body>
+    <table id="roll-results">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Appearances</td>
+                <td>Percent</td>
+            </tr>
+        </thead>
+    </table>
+    <a href='index.html'>Back to debugging tools</a>
+  </body>
+
+  <script src='../script/myyogadice.js'></script>
+  <script lang="text/javascript">
+    let rollCount = 1000;
+    let results = {};
+    for(let pose of die.poses) {
+        results[pose.name] = 0;
+    }
+
+    for (let i = 0; i < rollCount; i++) {
+        let poses = die.rollTheDice(7);
+        for(let pose of poses) {
+            results[pose.name] += 1;
+        }
+    }
+
+    let table = document.getElementById('roll-results');
+    for(let key in results) {
+        let row = table.insertRow();
+        let name = row.insertCell(0);
+        let appearances = row.insertCell(1);
+        let percent = row.insertCell(2);
+
+        name.innerText = key;
+        appearances.innerText = results[key];
+        percent.innerText = Math.floor((results[key] / rollCount) * 100);
+    }
+  </script>
+</html>
