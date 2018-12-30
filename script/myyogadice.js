@@ -55,13 +55,17 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
-die.addPose('Pigeon','images/pigeon.jpg', 'Pigeon');
-die.addPose('Fish','images/fish.png', 'Fish');
-die.addPose('Cobra','images/cobra.jpg', 'Cobra');
-die.addPose('Crow','images/crow.png', 'Crow');
-die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing Forward Bend');
+die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon');
 die.addPose('Triangle','images/triangle.jpg', 'Triangle');
-die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel');
+die.addPose('Bow Pose', 'images/bow-pose.png', 'Bow Pose', 'Dhanurasana', 'Chest Opening', )
+die.addPose('Fish','images/fish.png', 'Fish', 'Matsyasana', 'Chest Opening', 1);
+die.addPose('Cobra','images/cobra.jpg', 'Cobra', 'Bhujangasana', 'Chest Opening', 1);
+die.addPose('Crow','images/crow.png', 'Crow', 'Bakasana', 'Balance', 2);
+die.addPose('Standing Forward Bend','images/standing-forward-bend.png', 'Standing Forward Bend', 1);
+die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 1);
+die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
+die.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 1);
+die.addPose('Eagle Pose', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
 
 const rollButton = document.getElementById('roll');
 
