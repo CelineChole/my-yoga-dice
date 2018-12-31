@@ -39,10 +39,14 @@ class MyYogaDice {
         this.poses.push(new YogaPose(name, imageUri, caption, sanskritName, type, level));
     }
 
-    rollTheDice(numberOfPoses) {
+    rollTheDice(numberOfPoses, maxLevel = 3) {
         let posePictures = [];
         // Shuffle available poses into a new array
         let availablePoses = shuffle(this.poses.slice());
+
+        availablePoses = availablePoses.filter(pose => {
+            return pose.level <= maxLevel;
+        });
 
         // Pop items from the array until we have as many as we need
         for (let i = 0; i < numberOfPoses; i++) {
@@ -102,5 +106,3 @@ die.addPose('Chair', 'images/chair.png', 'Chair', 'Utkatasana', 'Core', 1);
 // Restorative
 // die.addPose('Reclining Bound Angle', 'images/reclining-bound-angle.jpg', 'Reclining Bound Angle', 'Supta Baddha Konasana', 'Restorative', 1);
 // die.addPose('Happy Baby', 'images/happy-baby.jpg', 'Happy Baby', 'Ananda Balasana', 'Restorative', 1);
-
-
