@@ -58,27 +58,49 @@ class MyYogaDice {
 }
 
 var die = new MyYogaDice();
+// Standing Poses
 die.addPose('Triangle', 'images/triangle.jpg', 'Triangle', 'Utthita Trikonasana', 'Standing', 1);
 die.addPose('Garland', 'images/garland.jpg', 'Garland', 'Malasana', 'Standing', 1);
 die.addPose('Standing Forward Bend', 'images/standing-forward-bend.png', 'Standing Forward Bend', 'Uttanasana', 'Standing', 1);
+die.addPose('Half Moon Pose', 'images/half-moon-pose.jpg', 'Half Moon Pose', 'Ardha Chandrasana', 'Standing', 2);
 die.addPose('Lord of the Dance Pose', 'images/lord-of-the-dance.png', 'Lord of the Dance Pose', 'Natarajasana', 'Standing', 3);
 
-die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon', 'Ardha Kapotasana', 'Chest Opening', 1);
-die.addPose('Bow', 'images/bow-pose.png', 'Bow Pose', 'Dhanurasana', 'Chest Opening', 2)
-die.addPose('Fish', 'images/fish.png', 'Fish', 'Matsyasana', 'Chest Opening', 1);
+// Chest Opening
+die.addPose('Fish', 'images/fish.jpeg', 'Fish', 'Matsyasana', 'Chest Opening', 1);
 die.addPose('Cobra', 'images/cobra.jpg', 'Cobra', 'Bhujangasana', 'Chest Opening', 1);
+die.addPose('Pigeon', 'images/pigeon.jpg', 'Pigeon', 'Ardha Kapotasana', 'Chest Opening', 1);
+die.addPose('Locust', 'images/locust.png', 'Locust', 'Salabhasana', 'Chest Opening', 1);
+die.addPose('Bow', 'images/bow-pose.png', 'Bow Pose', 'Dhanurasana', 'Chest Opening', 2)
+die.addPose('Camel', 'images/camel-pose.png', 'Camel', 'Ustrasana', 'Chest Opening', 3);
 
+// Balance
+die.addPose('Eagle', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
+die.addPose('Tree', 'images/tree.png', 'Tree', 'Vrksasana', 'Balance', 1);
 die.addPose('Crow', 'images/crow.png', 'Crow', 'Bakasana', 'Balance', 2);
 die.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 2);
-die.addPose('Eagle', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
 
+// Back
 die.addPose('Bridge', 'images/bridge.jpg', 'Bridge', 'Setu Bandha Sarvangasana', 'Back', 1);
 die.addPose('Wheel', 'images/wheel-chakarasana.jpg', 'Wheel', 'Urdhva Dhanurasana', 'Back', 2);
 die.addPose('Wheel one leg up', 'images/wheel-one-leg-up.png', 'Wheel One Leg Up', 'Eka Pada Urdvha Dhanurasana', 'Back', 3);
 
+// Twist
 die.addPose('Half Lord of the Fishes', 'images/Half Lord of the Fishes.jpg', 'Half Lord of the Fishes', 'Ardha Matsyendrasana', 'Twist', 1);
 die.addPose('Side Crane', 'images/revolved-chair-pose.jpeg', 'Side Crane', 'Parivrtta Utkatasana', 'twist', 2);
+die.addPose('Noose', 'images/noose.jpg', 'Noose', 'Pasasana', 'Twist', 2);
 
+// Inversion
 die.addPose('Dolphin', 'images/dolphin.jpg', 'Dolphin', 'Ardha Pincha Mayurasana', 'Inversion', 1);
 die.addPose('Plow', 'images/plow.jpg', 'Plow', 'Halasana', 'Inversion', 2);
-die.addPose('Shoulderstand', 'images/shoulderstand.jpg', 'Shoulderstand', 'Salamba Sarvangasana', 'Inversion', 3);
+die.addPose('Shoulderstand', 'images/shoulderstand.jpg', 'Shoulderstand', 'Salamba Sarvangasana', 'Inversion', 2);
+die.addPose('Headstand', 'images/headstand.jpg', 'Headstand', 'Salamba Sirsasana', 'Inversion', 3);
+
+// Core
+die.addPose('Boat', 'images/boat.jpg', 'Boat', 'Paripurna Navasana ', 'Core', 1);
+die.addPose('Chair', 'images/chair.png', 'Chair', 'Utkatasana', 'Core', 1);
+
+// Restorative
+// die.addPose('Reclining Bound Angle', 'images/reclining-bound-angle.jpg', 'Reclining Bound Angle', 'Supta Baddha Konasana', 'Restorative', 1);
+// die.addPose('Happy Baby', 'images/happy-baby.jpg', 'Happy Baby', 'Ananda Balasana', 'Restorative', 1);
+
+

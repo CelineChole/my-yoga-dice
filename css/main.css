@@ -63,16 +63,16 @@ img {
   }
 
 .poseHard {
-  border-color: #e68a00;
+  border-color: #2640f2;
   border-width: 0.3em;
 }
 
 .poseMedium {
-    border-color: #ffc266;
+    border-color: #5c99e0;
     border-width: 0.2em;
 }
 
 .poseEasy {
-  border-color: #ffebcc;
+  border-color: #82d9d4;
   border-width: 0.2em;
 }
