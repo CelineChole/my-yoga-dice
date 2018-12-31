@@ -56,9 +56,9 @@
 
     <form class="level">
       <p>Level</p>
-      <input type="radio" name="level" value="Beginner">Little Yogi<br>
-      <input type="radio" name="level" value="Intermediate">Yogi<br>
-      <input type="radio" name="level" value="Advanced">Yogi Master<br>
+      <input type="radio" name="level" id="levelBeginner" value="1">Little Yogi<br>
+      <input type="radio" name="level" id="levelIntermediate" value="2">Yogi<br>
+      <input type="radio" name="level" id="levelAdvanced" value="3" checked="checked">Yogi Master<br>
     </form>
 
     <!-- <form class="type">
@@ -82,8 +82,10 @@
     }
 
     function doDiceRoll() {
-      const poses = die.rollTheDice(tiles.length);
+      const maxLevel = document.querySelector('input[name="level"]:checked').value;
+      const poses = die.rollTheDice(tiles.length, maxLevel);
       for (let i = 0; i < poses.length; i++) {
+
         let curTile = tiles[i];
         let imgPose = curTile.getElementsByTagName("img")[0];
         let curPose = poses[i];
@@ -118,6 +120,7 @@
         doDiceRoll();
       }
     });
+
   </script>
 </body>
 
