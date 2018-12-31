@@ -53,8 +53,8 @@
   </main>
   <footer>
     <button id="roll" class='float-go'><i class="fa fa-dice"></i></button>
-    <button id="roll" class='float-filter'><i class="fa fa-filter"></i></button>
-    <button id="roll" class='float-share'><i class="fa fa-share-alt"></i></button>
+    <button id="btnFilter" class='float-filter'><i class="fa fa-filter"></i></button>
+    <button id="btnShare" class='float-share'><i class="fa fa-share-alt"></i></button>
 
     <form class="level">
       <p>Level</p>
@@ -75,6 +75,7 @@
 
 
   <script src='script/myyogadice.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script lang="text/javascript">
     window.dice = buildDiceWithPoses();
     let die = window.dice;
@@ -124,6 +125,12 @@
       if (event.keyCode === 82) {
         doDiceRoll();
       }
+    });
+
+    $("#roll").click(function() {
+      $("html,body").animate({
+        scrollTop: 0},
+        'slow');
     });
 
   </script>
