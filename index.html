@@ -1,109 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Yoga Dice</title>
-    <link rel="stylesheet" href="css/main.css">
-    <!-- <header>My Yoga Dice</header> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Yoga Dice</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <header>My Yoga Dice</header> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+</head>
 
-  <body>
-          <main>
-          <div class='tiles'>
-          <figure class='poseTile'>
-            <img class='poseImage' src="images/question.jpg">
-            <figcaption></figcaption>
-          </figure>
+<body>
+  <main>
+    <div class='tiles'>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/root-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/sacral-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/solar-slexus-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/heart-chakra.jpeg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/throat-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/third-eye-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
 
-          <figure class='poseTile'>
-              <img class='poseImage' src="images/question.jpg">
-              <figcaption></figcaption>
-          </figure>
-        </div>
+      <figure class='poseTile'>
+        <img class='poseImage' src="images/crown-chakra.jpg">
+        <figcaption></figcaption>
+      </figure>
+    </div>
 
-        </main>
-        <footer>
-            <button id ="roll" class='float'><i class="fa fa-dice"></i></button>
+  </main>
+  <footer>
+    <button id="roll" class='float'><i class="fa fa-dice"></i></button>
 
-            <form>
-                <p>Select your level</p>
-                <input type="radio" name="level" value="Beginner">Little Yogi<br>
-                <input type="radio" name="level" value="Intermediate">Yogi<br>
-                <input type="radio" name="level" value="Advanced">Yogi Master<br>
-              </form>
-        </footer>
+    <form class="level">
+      <p>Level</p>
+      <input type="radio" name="level" value="Beginner">Little Yogi<br>
+      <input type="radio" name="level" value="Intermediate">Yogi<br>
+      <input type="radio" name="level" value="Advanced">Yogi Master<br>
+    </form>
+
+    <!-- <form class="type">
+                  <p>Type</p>
+                  <input type="radio" name="type" value="Standing">Standing<br>
+                  <input type="radio" name="type" value="Inversion">Yogi<br>
+                  <input type="radio" name="type" value="Advanced">Yogi Master<br>
+                </form> -->
 
 
-    <script src='script/myyogadice.js'></script>
-    <script lang="text/javascript">
+  </footer>
+
+
+  <script src='script/myyogadice.js'></script>
+  <script lang="text/javascript">
     const poseTiles = document.getElementsByClassName("poseTile");
     let tiles = [];
 
-    for(let element of poseTiles) {
-        tiles.push(element);
+    for (let element of poseTiles) {
+      tiles.push(element);
     }
 
     function doDiceRoll() {
       const poses = die.rollTheDice(tiles.length);
-        for(let i = 0; i < poses.length; i++) {
-          let curTile = tiles[i];
-          let imgPose = curTile.getElementsByTagName("img")[0];
-          let curPose = poses[i];
+      for (let i = 0; i < poses.length; i++) {
+        let curTile = tiles[i];
+        let imgPose = curTile.getElementsByTagName("img")[0];
+        let curPose = poses[i];
 
-          imgPose.src = curPose.image;
-          imgPose.title = curPose.name;
-          curTile.getElementsByTagName("figcaption")[0].innerText = curPose.caption;
+        imgPose.src = curPose.image;
+        imgPose.title = curPose.name;
+        curTile.getElementsByTagName("figcaption")[0].innerText = curPose.caption;
 
-          imgPose.classList.remove('poseHard');
-          imgPose.classList.remove('poseMedium');
+        imgPose.classList.remove('poseHard');
+        imgPose.classList.remove('poseMedium');
+        imgPose.classList.remove('poseEasy');
 
-          switch(curPose.level) {
-            case 3:
+        switch (curPose.level) {
+          case 3:
             imgPose.classList.add('poseHard');
             break;
 
-            case 2:
+          case 2:
             imgPose.classList.add('poseMedium');
             break;
-          }
+
+          case 1:
+          imgPose.classList.add('poseEasy');
+          break;
         }
+      }
     }
 
     document.getElementById('roll').addEventListener('click', doDiceRoll);
-    document.addEventListener('keyup', function(event) {
-      if(event.keyCode === 82) {
+    document.addEventListener('keyup', function (event) {
+      if (event.keyCode === 82) {
         doDiceRoll();
       }
     });
-    </script>
-  </body>
+  </script>
+</body>
 
 </html>

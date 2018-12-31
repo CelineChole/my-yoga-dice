@@ -16,12 +16,12 @@ form {
     font-family: arial, helvetica, sans-serif;
 }
 
-  .tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: minmax(150px, auto);
-    grid-gap: 1em;
-  }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+}
 
 .float:hover {
     background-color: #0059b3;
@@ -30,20 +30,20 @@ form {
 
 .float{
 	position:fixed;
-	width:60px;
-	height:60px;
+	width:70px;
+	height:70px;
 	bottom:40px;
 	right:40px;
 	background-color:#0C9;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-    box-shadow: 2px 2px 3px #999;
-    font-size: 25px;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 35px;
 }
 
 img {
-    border: 1px solid #ddd;
+    border: 0.2em solid white;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
@@ -62,13 +62,17 @@ img {
     padding: 5px;
   }
 
-  .poseHard {
-    border-color: #0077b3;
-    border-width: 0.3em;
-  }
+.poseHard {
+  border-color: #e68a00;
+  border-width: 0.3em;
+}
 
-  .poseMedium {
-      border-color: #99ddff;
-      border-width: 0.2em;
-  }
+.poseMedium {
+    border-color: #ffc266;
+    border-width: 0.2em;
+}
 
+.poseEasy {
+  border-color: #ffebcc;
+  border-width: 0.2em;
+}
