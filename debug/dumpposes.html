@@ -25,6 +25,7 @@
 
   <script src='../script/myyogadice.js'></script>
   <script lang="text/javascript">
+    let die = buildDiceWithPoses();
     let table = document.getElementById('all-poses');
     for(let pose of die.poses) {
         let row = table.insertRow();

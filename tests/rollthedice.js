@@ -1,5 +1,5 @@
 describe('roll the dice function', () => {
-    let die = new MyYogaDice();
+    let die = buildDiceWithPoses();
 
     it('returns the correct number of poses asked for', () => {
         let poses = die.rollTheDice(1);
