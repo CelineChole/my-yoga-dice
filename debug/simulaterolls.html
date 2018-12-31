@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>My Yoga Dice :: Simulate Rolls</title>
     <header>My Yoga Dice :: Debugging Tools :: Simulate Rolls</header>
-  </head>
+</head>
 
-  <body>
-    <table id="roll-results">
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Appearances</td>
-                <td>Percent</td>
-            </tr>
-        </thead>
-    </table>
+<body>
+    <div>
+        <h3>Filters</h3>
+        <input type="radio" name="level" value="1">Little Yogi</input>
+        <input type="radio" name="level" value="2">Yogi</input>
+        <input type="radio" name="level" value="3" checked="checked">Yogi Master</input>
+        <button type="button" name="simulate" onclick='simulate()'>Simulate</button>
+    </div>
+    <div>
+        <h3>Results</h3>
+        <table id="roll-results">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Appearances</td>
+                    <td>Percent</td>
+                </tr>
+            </thead>
+            <tbody id="roll-results-body">
+
+            </tbody>
+        </table>
+    </div>
     <a href='index.html'>Back to debugging tools</a>
-  </body>
+</body>
 
-  <script src='../script/myyogadice.js'></script>
-  <script lang="text/javascript">
-    let die = buildDiceWithPoses();
+<script src='../script/myyogadice.js'></script>
+<script lang="text/javascript">
+    simulate();
+    
+    function simulate() {
+        let die = buildDiceWithPoses();
+        let maxLevel = document.querySelector('input[name="level"]:checked').value;
+        
+        let rollCount = 1000;
+        let results = {};
+        for (let pose of die.poses) {
+            results[pose.name] = 0;
+        }
 
-    let rollCount = 1000;
-    let results = {};
-    for(let pose of die.poses) {
-        results[pose.name] = 0;
-    }
+        for (let i = 0; i < rollCount; i++) {
+            let poses = die.rollTheDice(7, maxLevel);
+            for (let pose of poses) {
+                results[pose.name] += 1;
+            }
+        }
+    
+        let table = document.getElementById('roll-results-body');
+        while(table.children.length > 0) {
+            table.removeChild(table.firstChild);
+        }
 
-    for (let i = 0; i < rollCount; i++) {
-        let poses = die.rollTheDice(7);
-        for(let pose of poses) {
-            results[pose.name] += 1;
+        for (let key in results) {
+            let row = table.insertRow();
+            let name = row.insertCell(0);
+            let appearances = row.insertCell(1);
+            let percent = row.insertCell(2);
+            
+            name.innerText = key;
+            appearances.innerText = results[key];
+            percent.innerText = Math.floor((results[key] / rollCount) * 100);
         }
     }
+    </script>
 
-    let table = document.getElementById('roll-results');
-    for(let key in results) {
-        let row = table.insertRow();
-        let name = row.insertCell(0);
-        let appearances = row.insertCell(1);
-        let percent = row.insertCell(2);
-
-        name.innerText = key;
-        appearances.innerText = results[key];
-        percent.innerText = Math.floor((results[key] / rollCount) * 100);
-    }
-  </script>
-</html>
+    </html>
