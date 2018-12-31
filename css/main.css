@@ -3,7 +3,7 @@ body {
     grid-gap: 1em;
     margin: 0 auto;
     max-width: 90%;
-    padding: 1em 0;
+    padding: 2em 0;
   }
   
   main,
@@ -18,17 +18,12 @@ form {
 
 .tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 1em;
 }
 
-.float:hover {
-    background-color: #0059b3;
-    color: white;
-}
-
-.float{
+.float-go{
 	position:fixed;
 	width:70px;
 	height:70px;
@@ -42,6 +37,47 @@ form {
   font-size: 35px;
 }
 
+.float-go:hover {
+  background-color: #0059b3;
+  color: white;
+}
+
+/* flyout buttons */
+/* https://codepen.io/SinceSidSlid/pen/vExJaP */
+
+.float-filter{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:120px;
+	right:52px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 20px;
+}
+
+.float-filter:hover {
+  background-color: #0059b3;
+  color: white;
+}
+
+.float-share{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:180px;
+	right:52px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 20px;
+}
+
 img {
     border: 0.2em solid white;
     border-radius: 4px;
@@ -51,16 +87,16 @@ img {
     text-align: center;
   }
 
-  figure {
-    /* width: 10px; */
-    text-align: center;
-    font-style: italic;
-    font-size: smaller;
-    text-indent: 0;
-    /* border: thick silver solid; */
-    margin: 1px;
-    padding: 5px;
-  }
+figure {
+  /* width: 10px; */
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  /* border: thick silver solid; */
+  margin: 1px;
+  padding: 5px;
+}
 
 .poseHard {
   border-color: #2640f2;
@@ -75,4 +111,8 @@ img {
 .poseEasy {
   border-color: #82d9d4;
   border-width: 0.2em;
+}
+
+.level {
+  padding: 40px;
 }
