@@ -7,7 +7,7 @@ body {
 }
   
 main,
-footer {
+{
   align-items: center;
   justify-content: center;
 }
@@ -41,6 +41,20 @@ form {
   background-color: #0059b3;
   color: white;
 }
+
+/* .float-menu{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:120px;
+	right:52px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 20px;
+} */
 
 /* flyout buttons */
 /* https://codepen.io/SinceSidSlid/pen/vExJaP */
@@ -113,6 +127,6 @@ figure {
   border-width: 0.2em;
 }
 
-.level {
+.level, .type, .about {
   padding: 40px;
 }
