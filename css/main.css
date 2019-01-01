@@ -13,7 +13,12 @@ main,
 }
 
 form {
-    font-family: arial, helvetica, sans-serif;
+  font-family: arial, helvetica, sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  padding-bottom: 20px;
 }
 
 .tiles {
@@ -127,6 +132,42 @@ figure {
   border-width: 0.2em;
 }
 
-.level, .type, .about {
-  padding: 40px;
+.about-level, .about-type, .about, .about-chakra, .about-shortcuts {
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.root {
+  color: #ff6666;
+  padding: 10px;
+}
+
+.sacral {
+  color: #ff944d;
+  padding: 10px;
+}
+
+.solar {
+  color: #e6e600;
+  padding: 10px;
+}
+
+.heart {
+  color:#5cd65c;
+  padding: 10px;
+}
+
+.throat {
+  color: #33bbff;
+  padding: 10px;
+}
+
+.thirdEye {
+  color: #3333ff;
+  padding: 10px;
+}
+
+.crown {
+  color: #9933ff;
+  padding: 10px;
 }

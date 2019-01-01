@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Yoga Dice</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -61,85 +62,116 @@
 
     <form class="level">
       <h2>Level</h2>
-        
-    <div class="btn-group btn-group-toggle" role="group" aria-label="levels" data-toggle="buttons">
-      <label class="btn btn-dark">
-        <input type="radio" name="level" value="1">Little Yogi<br>
-      </label>
-      <label class="btn btn-dark">
-        <input type="radio" name="level" value="2">Yogi<br>
-      </label>
-      <label class="btn btn-dark active">
-       <input type="radio" checked name="level" name="level" value="3">Yogi Master<br>
-      </label>
-    </div>
+
+      <div class="btn-group btn-group-toggle" role="group" aria-label="levels" data-toggle="buttons">
+        <label class="btn btn-dark">
+          <input type="radio" name="level" value="1">Little Yogi<br>
+        </label>
+        <label class="btn btn-dark">
+          <input type="radio" name="level" value="2">Yogi<br>
+        </label>
+        <label class="btn btn-dark active">
+          <input type="radio" checked name="level" name="level" value="3">Yogi Master<br>
+        </label>
+      </div>
     </form>
 
     <form class="type">
-        <h2>Chakra</h2>
-        <label>
-          <input type="checkbox" name="type" value="Standing" checked>Root chakra<br>
-        </label>
-        <label>
-          <input type="checkbox" name="type" value="Twist" checked>Sacral chakra<br>
-        </label>
-        <label>
-         <input type="checkbox" name="type" value="Core" checked>Solar Plexus chakra<br>
-        </label>
-        <label>
-          <input type="checkbox" name="type" value="Chest Opening" checked>Heart chakra<br>
-        </label>
-        <label>
-          <input type="checkbox" name="type" value="Back" checked>Throat chakra<br>
-        </label>
-        <label>
-          <input type="checkbox" name="type" value="Inversion" checked>Third Eye chakra<br>
-        </label>
-        <label>
-          <input type="checkbox" name="type" value="Balance" checked>Crown chakra<br>
-        </label>
-      </form>
-
-</div>
-
-<div class="about">
-  <h1>About</h1>
-  <div class="level">
-    <h5>Level</h5>
-
-  </div>
-  <div class="shortcuts">
-    <h5>Shortcuts</h5>
+      <h2>Chakras</h2>
+      <label>
+        <input type="checkbox" name="type" value="Standing" checked>Root chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Twist" checked>Sacral chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Core" checked>Solar Plexus chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Chest Opening" checked>Heart chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Back" checked>Throat chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Inversion" checked>Third Eye chakra<br>
+      </label>
+      <label>
+        <input type="checkbox" name="type" value="Balance" checked>Crown chakra<br>
+      </label>
+    </form>
 
   </div>
 
-  <div class="chakra">
-    <h5>Chakra</h5>
+  <div class="about">
+    <h1>About</h1>
+    <div class="about-level">
+      <h5>Level</h5>
+      <p>Little Yogi: beginner poses (light cyan)</p>
+      <p>Yogi: beginner & intermediate poses (cyan)</p>
+      <p>Yogi Master: a mix of all poses (blue)</p>
+    </div>
 
-    <h6>Muladhara: Root Chakra</h6>
-    <p>Standing positions</p>
+    <div class="about-shortcuts">
+      <h5>Shortcuts</h5>
+      <p>Press R to roll the dice</p>
 
-    <h6>Svadhishthana: Scral Chakra</h6>
-    <h6>Manipura: Solar Plexus Chakra</h6>
-    <h6>Anahata: Heart Chakra</h6>
-    <h6>Vishuddha: Throat Chakra</h6>
-    <h6>Ajna: Third Eye Chakra</h6>
-    <h6>Sahasrara: Crown Chakra</h6>
+    </div>
 
-     
-  
-  </div>  
+    <div class="about-chakra">
+      <h5>Chakras</h5>
+
+      <p>Overview of poses' type depending on the chakra selected.</p>
+
+      <div class="root">
+        <h6>Muladhara: Root Chakra</h6>
+        <p>Standing positions</p>
+      </div>
+
+      <div class="sacral">
+        <h6>Svadhishthana: Sacral Chakra</h6>
+        <p>Twisted positions</p>
+      </div>
+
+      <div class="solar">
+        <h6>Manipura: Solar Plexus Chakra</h6>
+        <p>Core positions</p>
+      </div>
+
+      <div class="heart">
+        <h6>Anahata: Heart Chakra</h6>
+        <p>Chest opening positions</p>
+      </div>
+
+      <div class="throat">
+        <h6>Vishuddha: Throat Chakra</h6>
+        <p>Back positions</p>
+      </div>
+
+      <div class="thirdEye">
+        <h6>Ajna: Third Eye Chakra</h6>
+        <p>Inversion positions</p>
+      </div>
+
+      <div class="crown">
+        <h6>Sahasrara: Crown Chakra</h6>
+        <p>Balance positions</p>
+      </div>
+
+    </div>
 
 
-</div>
+  </div>
 
 
 
 
   <script src='script/myyogadice.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
   <script lang="text/javascript">
     window.dice = buildDiceWithPoses();
     let die = window.dice;
@@ -153,7 +185,7 @@
 
     function doDiceRoll() {
       const maxLevel = document.querySelector('input[name="level"]:checked').value;
-      
+
       const checkboxes = document.querySelectorAll('input[name="type"]:checked');
       const poseFilter = [];
 
@@ -187,8 +219,8 @@
             break;
 
           case 1:
-          imgPose.classList.add('poseEasy');
-          break;
+            imgPose.classList.add('poseEasy');
+            break;
         }
       }
     }
@@ -200,15 +232,17 @@
       }
     });
 
-    $("#roll").click(function() {
+    $("#roll").click(function () {
       $("html,body").animate({
-        scrollTop: 0},
+        scrollTop: 0
+      },
         'slow');
     });
 
-    $("#btnFilter").click(function() {
+    $("#btnFilter").click(function () {
       $("html,body").animate({
-        scrollTop: $(".level").offset().top},
+        scrollTop: $(".level").offset().top
+      },
         'slow');
     });
 
