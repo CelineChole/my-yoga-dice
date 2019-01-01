@@ -78,25 +78,25 @@
     <form class="type">
         <h2>Chakra</h2>
         <label>
-          <input type="radio" name="type" value="standing">Root chakra<br>
+          <input type="checkbox" name="type" value="Standing" checked>Root chakra<br>
         </label>
         <label>
-          <input type="radio" name="type" value="twist">Sacral chakra<br>
+          <input type="checkbox" name="type" value="Twist" checked>Sacral chakra<br>
         </label>
         <label>
-         <input type="radio" name="type" value="core">Solar Plexus chakra<br>
+         <input type="checkbox" name="type" value="Core" checked>Solar Plexus chakra<br>
         </label>
         <label>
-          <input type="radio" name="type" value="chest">Heart chakra<br>
+          <input type="checkbox" name="type" value="Chest Opening" checked>Heart chakra<br>
         </label>
         <label>
-          <input type="radio" name="type" value="back">Throat chakra<br>
+          <input type="checkbox" name="type" value="Back" checked>Throat chakra<br>
         </label>
         <label>
-          <input type="radio" name="type" value="inversion">Third Eye chakra<br>
+          <input type="checkbox" name="type" value="Inversion" checked>Third Eye chakra<br>
         </label>
         <label>
-          <input type="radio" name="type" value="balance">Crown chakra<br>
+          <input type="checkbox" name="type" value="Balance" checked>Crown chakra<br>
         </label>
       </form>
 
@@ -153,7 +153,16 @@
 
     function doDiceRoll() {
       const maxLevel = document.querySelector('input[name="level"]:checked').value;
-      const poses = die.rollTheDice(tiles.length, maxLevel);
+      
+      const checkboxes = document.querySelectorAll('input[name="type"]:checked');
+      const poseFilter = [];
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        poseFilter.push(checkboxes[i].value);
+      }
+
+
+      const poses = die.rollTheDice(tiles.length, maxLevel, poseFilter);
       for (let i = 0; i < poses.length; i++) {
 
         let curTile = tiles[i];

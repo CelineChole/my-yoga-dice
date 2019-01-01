@@ -10,12 +10,12 @@ describe('roll the dice function', () => {
     });
 
     it('only returns standing poses when filtered', () => {
-        let poseFilter = ['standing'];
+        let poseFilter = ['Standing'];
 
         let poses = die.rollTheDice(100, 3, poseFilter);
 
         let nonStandingPoses = poses.filter(pose => {
-            return pose.type !== 'standing' && pose.type !== 'Unknown';
+            return pose.type !== 'Standing' && pose.type !== 'Unknown';
         });
 
         expect(nonStandingPoses.length).toBe(0);
