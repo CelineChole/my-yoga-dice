@@ -61,22 +61,16 @@
 
     <form class="level">
       <h2>Level</h2>
-
-      <!-- <div class="btn-group" role="group" aria-label="levels" class="level">
-          <button type="button" class="btn btn-secondary" name="level" id="levelBeginner" value="1">Little Yogi</button>
-          <button type="button" class="btn btn-secondary" name="level" id="levelIntermediate" value="2">Middle</button>
-          <button type="button" class="btn btn-secondary" name="level" id="levelAdvanced" value="3">Right</button>
-        </div> -->
         
-        <div class="btn-group" role="group" aria-label="levels" class="level">
-      <label>
-        <button type="button" class="btn btn-secondary" name="level" id="levelBeginner" value="1">Little Yogi<br>
+    <div class="btn-group btn-group-toggle" role="group" aria-label="levels" data-toggle="buttons">
+      <label class="btn btn-dark">
+        <input type="radio" name="level" value="1">Little Yogi<br>
       </label>
-      <label>
-        <button type="button" class="btn btn-secondary" name="level" id="levelIntermediate" value="2">Yogi<br>
+      <label class="btn btn-dark">
+        <input type="radio" name="level" value="2">Yogi<br>
       </label>
-      <label>
-       <button type="button" class="btn btn-secondary" name="level" id="levelAdvanced" name="level" id="levelAdvanced" value="3">Yogi Master<br>
+      <label class="btn btn-dark active">
+       <input type="radio" checked name="level" name="level" value="3">Yogi Master<br>
       </label>
     </div>
     </form>
@@ -110,6 +104,10 @@
 
 <div class="about">
   <h1>About</h1>
+  <div class="level">
+    <h5>Level</h5>
+
+  </div>
   <div class="shortcuts">
     <h5>Shortcuts</h5>
 
