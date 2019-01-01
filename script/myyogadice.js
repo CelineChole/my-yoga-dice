@@ -39,7 +39,7 @@ class MyYogaDice {
         this.poses.push(new YogaPose(name, imageUri, caption, sanskritName, type, level));
     }
 
-    rollTheDice(numberOfPoses, maxLevel = 3) {
+    rollTheDice(numberOfPoses, maxLevel = 3, poseFilter = []) {
         let posePictures = [];
         // Shuffle available poses into a new array
         let availablePoses = shuffle(this.poses.slice());
@@ -48,13 +48,17 @@ class MyYogaDice {
             return pose.level <= maxLevel;
         });
 
+        availablePoses = availablePoses.filter(pose => {
+            return poseFilter.includes(pose.type);
+        })
+
         // Pop items from the array until we have as many as we need
         for (let i = 0; i < numberOfPoses; i++) {
             if (availablePoses.length > 0) {
                 posePictures.push(availablePoses.pop());
             } else {
                 // If we run out of poses pop a default pose
-                posePictures.push(new YogaPose('All out of poses!', this.defaultImage));
+                posePictures.push(new YogaPose('All out of poses!', this.defaultImage, "", "","Unknown"));
             }
         }
         return posePictures;
