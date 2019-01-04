@@ -71,8 +71,8 @@ function buildDiceWithPoses() {
     dice.addPose('Triangle', 'images/triangle.jpg', 'Triangle', 'Utthita Trikonasana', 'Standing', 1);
     dice.addPose('Garland', 'images/garland.jpg', 'Garland', 'Malasana', 'Standing', 1);
     dice.addPose('Standing Forward Bend', 'images/standing-forward-bend.png', 'Standing Forward Bend', 'Uttanasana', 'Standing', 1);
-    dice.addPose('Half Moon Pose', 'images/half-moon-pose.jpg', 'Half Moon Pose', 'Ardha Chandrasana', 'Standing', 2);
-    dice.addPose('Lord of the Dance Pose', 'images/lord-of-the-dance.png', 'Lord of the Dance Pose', 'Natarajasana', 'Standing', 3);
+    dice.addPose('Half Moon', 'images/half-moon-pose.jpg', 'Half Moon', 'Ardha Chandrasana', 'Standing', 2);
+    dice.addPose('Lord of the Dance', 'images/lord-of-the-dance.png', 'Lord of the Dance', 'Natarajasana', 'Standing', 3);
 
     // Chest Opening
     dice.addPose('Fish', 'images/fish.jpeg', 'Fish', 'Matsyasana', 'Chest Opening', 1);
@@ -83,7 +83,7 @@ function buildDiceWithPoses() {
     dice.addPose('Camel', 'images/camel-pose.png', 'Camel', 'Ustrasana', 'Chest Opening', 3);
 
     // Balance
-    dice.addPose('Eagle', 'images/eagle-pose.png', 'Eagle Pose', 'Garudasana', 'Balance', 1);
+    dice.addPose('Eagle', 'images/eagle-pose.png', 'Eagle', 'Garudasana', 'Balance', 1);
     dice.addPose('Tree', 'images/tree.png', 'Tree', 'Vrksasana', 'Balance', 1);
     dice.addPose('Crow', 'images/crow.png', 'Crow', 'Bakasana', 'Balance', 2);
     dice.addPose('Side Plank', 'images/side-plank.jpeg', 'Side Plank', 'Vasisthasana', 'Balance', 2);
